@@ -1,4 +1,3 @@
-/*
 const person = {
   name: 'Fred',
 };
@@ -131,24 +130,3 @@ const coffeeShop = {
 coffeeShop.drinksOrdered('capuccino', 'espresso');
 coffeeShop.drinksOrdered('latte', 'americano');
 coffeeShop.foodOrdered('toastie', 'chips');
-*/
-
-const coffeeBean = {
-  branch: 'Manchester',
-  foodMenu: [
-    ['Cookie', 'Muffin', 'Croissant', 'Sandwich'],
-    [1.5, 2.0, 2.0, 3.0],
-  ],
-  drinkMenu: [
-    ['Americano', 'Latte', 'Espresso', 'Tea'],
-    [2.0, 2.5, 1.5, 1.0],
-  ],
-  foodOrdered() {
-    return console.log(coffeeBean.foodMenu[0][1]);
-  },
-  drinkOrdered() {
-    return console.log(coffeeBean.drinkMenu[0][1]);
-  },
-};
-coffeeBean.foodOrdered('Cookie');
-coffeeBean.drinkOrdered('Americano');
