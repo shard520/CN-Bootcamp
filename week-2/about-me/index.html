@@ -18,6 +18,7 @@
   <body>
     <h1>About Me</h1>
     <img
+      class="img--profile-pic"
       src="https://static.wikia.nocookie.net/stargate-sgc/images/9/94/Daniel_Jackson_001.jpg"
     />
     <div class="lists">
@@ -63,21 +64,22 @@
       </h2>
       <div class="targets__box">
         <div class="targets__item u-margin-sides-md">
-          <label for="jsFundamentals">JS Fundamentals</label
-          ><progress id="jsFundamentals" max="100" value="95">95%</progress>
+          <label for="jsFundamentals">JS Fundamentals</label>
+          <progress id="jsFundamentals" max="100" value="95">95%</progress>
         </div>
 
         <div class="targets__item u-margin-sides-md">
-          <label for="inductionDocs">Induction docs</label
-          ><progress id="inductionDocs" max="100" value="80">80%</progress>
+          <label for="inductionDocs">Induction docs</label>
+          <progress id="inductionDocs" max="100" value="80">80%</progress>
         </div>
 
         <div class="targets__item u-margin-sides-md">
-          <label for="lessCoffee">Drinking less coffee</label
-          ><progress id="lessCoffee" max="100" value="20">20%</progress>
+          <label for="lessCoffee">Drinking less coffee</label>
+          <progress id="lessCoffee" max="100" value="20">20%</progress>
         </div>
       </div>
     </div>
+    <hr />
     <div class="editable">
       <p class="u-margin-bottom-sm" contenteditable="true" spellcheck="true">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda
@@ -89,6 +91,7 @@
         Disabled Button
       </button>
     </div>
+    <hr />
     <div class="form__container">
       <form class="form">
         <div class="form__group">
@@ -122,21 +125,23 @@
             <input class="form__input" type="text" name="lName" id="lName" />
           </div>
         </div>
-        <!-- <div class="form__group"> -->
-        <p>Favourite type of pickle:</p>
-        <div class="form__group--radio">
-          <label for="onions">Onions</label
-          ><input type="radio" name="pickle" id="onions" />
+        <div class="form__group form__group--radio">
+          <p>Favourite type of pickle:</p>
+          <div class="form__radio-choices">
+            <div class="form__element--radio">
+              <label class="form__label--radio" for="onions">Onions</label>
+              <input type="radio" name="pickle" id="onions" />
+            </div>
+            <div class="form__element--radio">
+              <label class="form__label--radio" for="eggs">Eggs</label>
+              <input type="radio" name="pickle" id="eggs" />
+            </div>
+            <div class="form__element--radio">
+              <label class="form__label--radio" for="rick">Rick</label>
+              <input type="radio" name="pickle" id="rick" />
+            </div>
+          </div>
         </div>
-        <div class="form__group--radio">
-          <label for="eggs">Eggs</label
-          ><input type="radio" name="pickle" id="eggs" />
-        </div>
-        <div class="form__group--radio">
-          <label for="rick">Rick</label
-          ><input type="radio" name="pickle" id="rick" />
-        </div>
-        <!-- </div> -->
         <button class="btn" type="submit">Submit</button>
       </form>
     </div>

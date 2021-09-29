@@ -33,32 +33,31 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
-img {
-  margin: auto;
+.img--profile-pic {
+  margin: 0 auto 2rem;
   display: block;
 }
 
 .lists {
   width: 100%;
   display: flex;
-  place-content: center;
-  margin: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .lists__box {
   display: flex;
   flex-direction: column;
-  margin: 0 2rem;
+  align-items: center;
 }
 
 .lists__heading {
   text-align: center;
 }
 
-ul,
-ol {
+ul {
   list-style-position: inside;
-  margin: auto;
 }
 
 hr {
@@ -81,6 +80,8 @@ hr {
 .targets__item {
   display: flex;
   justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.5rem 0;
 }
 
 .editable {
@@ -104,28 +105,46 @@ hr {
 }
 
 .form {
-  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -2rem;
 }
 
 .form__group {
-  padding: 0.5rem 0;
-  width: 50%;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.form__group--radio {
+  gap: 1rem;
 }
 
 .form__element {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
 }
 
-.form__group--radio {
+.form__element--radio {
   display: inline-block;
+  margin: 0 1rem;
+}
+
+.form__radio-choices {
+  flex: 100%;
+  text-align: center;
 }
 
 .form__label {
   padding: 1rem;
+}
+
+.form__label--radio {
+  margin-right: 0.5rem;
 }
 
 .form__input {

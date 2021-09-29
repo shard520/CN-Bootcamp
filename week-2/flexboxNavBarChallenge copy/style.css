@@ -53,13 +53,20 @@ li {
 
 @media all and (max-width: 1000px) {
   .flex-nav ul {
-    flex-direction: column;
+    flex-wrap: wrap;
   }
 
   li:not(.social) {
     flex-basis: 50%;
   }
+
+  .social {
+    flex-basis: 25%;
+  }
 }
 
 @media all and (max-width: 500px) {
+  li:not(.social) {
+    flex-basis: 100%;
+  }
 }
