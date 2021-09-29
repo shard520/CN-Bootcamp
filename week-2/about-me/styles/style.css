@@ -1,5 +1,7 @@
 :root {
   --red-accent-rgb: 143, 19, 19;
+  --light-red-accent-rgb: 253, 242, 242;
+  --box-shadow-main: 1px 1px 5px rgba(var(--red-accent-rgb), 0.3);
 }
 
 * {
@@ -12,7 +14,7 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
+.container--main {
   margin: 0 2rem;
 }
 
@@ -92,7 +94,15 @@ hr {
 
 .btn {
   padding: 0.5rem 1rem;
+  border: none;
   border-radius: 0.5rem;
+  box-shadow: var(--box-shadow-main);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:focus,
+.footer__link:focus {
+  outline: none;
 }
 
 .btn--disabled {
@@ -102,6 +112,10 @@ hr {
 .btn--editable {
   display: block;
   margin: auto;
+}
+
+.container--form {
+  margin-bottom: 3rem;
 }
 
 .form {
@@ -151,10 +165,30 @@ hr {
   padding: 0.5rem 1rem;
 }
 
-a {
-  display: block;
+.footer {
+  display: flex;
+  padding: 1.5rem 0;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer__link {
+  color: black;
   text-decoration: none;
   padding: 0.5rem;
+  border: 1px solid rgb(var(--red-accent-rgb));
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow-main);
+  transition: all 0.3s ease-in-out;
+}
+
+.footer__link:hover,
+.btn--submit:hover,
+.footer__link:focus,
+.btn--submit:focus {
+  background-color: rgb(var(--red-accent-rgb));
+  color: white;
 }
 
 .u-margin-sides-md {
@@ -166,9 +200,9 @@ a {
 }
 
 .u-text-highlight {
-  filter: drop-shadow(1px 1px rgba(var(--red-accent-rgb), 0.3));
+  filter: drop-shadow(1px 1px rgba(var(--red-accent-rgb), 0.3)) !important;
 }
 
 .u-underline {
-  border-bottom: 1px solid rgba(var(--red-accent-rgb), 0.3);
+  border-bottom: 1px solid rgba(var(--red-accent-rgb), 0.3) !important;
 }
