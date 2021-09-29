@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>About Me</title>
+  </head>
+  <body>
+    <h1>About Me</h1>
+    <img
+      src="https://static.wikia.nocookie.net/stargate-sgc/images/9/94/Daniel_Jackson_001.jpg"
+    />
+    <div class="lists">
+      <div class="lists__box">
+        <h2 class="lists__heading u-text-highlight">
+          <span class="u-underline">Favourite Food</span>
+        </h2>
+        <ul>
+          <li>Oranges</li>
+          <li>Skittles</li>
+          <li>Lamb Chop</li>
+          <li>Pizza</li>
+        </ul>
+      </div>
+      <div class="lists__box">
+        <h2 class="lists__heading u-text-highlight">
+          <span class="u-underline">Favourite Seasons</span>
+        </h2>
+        <ol>
+          <li>Summer</li>
+          <li>Summer</li>
+          <li>Summer</li>
+          <li>Spring</li>
+        </ol>
+      </div>
+    </div>
+    <hr />
+    <div>
+      <h2 class="u-text-highlight">
+        <span class="u-underline">Why did you join Codenation?</span>
+      </h2>
+      <p class="u-margin-sides-md u-margin-bottom-sm">
+        After a decade of saving the earth; destroying the Goa'uld and the Ori,
+        I realised it was time for a quieter life. Translating Ancient texts
+        throughout the years made me realise that coding would be a good fit for
+        me.
+      </p>
+    </div>
+    <hr />
+    <div>
+      <h2 class="u-text-highlight">
+        <span class="u-underline">Week 1 Targets</span>
+      </h2>
+      <div class="targets__box">
+        <div class="targets__item u-margin-sides-md">
+          <label for="jsFundamentals">JS Fundamentals</label
+          ><progress id="jsFundamentals" max="100" value="95">95%</progress>
+        </div>
+
+        <div class="targets__item u-margin-sides-md">
+          <label for="inductionDocs">Induction docs</label
+          ><progress id="inductionDocs" max="100" value="80">80%</progress>
+        </div>
+
+        <div class="targets__item u-margin-sides-md">
+          <label for="lessCoffee">Drinking less coffee</label
+          ><progress id="lessCoffee" max="100" value="20">20%</progress>
+        </div>
+      </div>
+    </div>
+    <div class="editable">
+      <p class="u-margin-bottom-sm" contenteditable="true" spellcheck="true">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda
+        deleniti cum impedit id? Perferendis aperiam deleniti tenetur aspernatur
+        sint. Ipsum velit soluta tempora ducimus ex eum nobis obcaecati! Quae,
+        officia!
+      </p>
+      <button class="btn btn--disabled btn--editable" disabled>
+        Disabled Button
+      </button>
+    </div>
+    <div class="form__container">
+      <form class="form">
+        <div class="form__group">
+          <div class="form__element">
+            <label class="form__label" for="username">Username:</label>
+            <input
+              class="form__input"
+              type="text"
+              name="username"
+              id="username"
+            />
+          </div>
+          <div class="form__element">
+            <label class="form__label" for="password">Password:</label>
+            <input
+              class="form__input"
+              type="password"
+              name="password"
+              id="password"
+            />
+          </div>
+        </div>
+
+        <div class="form__group">
+          <div class="form__element">
+            <label class="form__label" for="fName">First Name:</label>
+            <input class="form__input" type="text" name="fName" id="fName" />
+          </div>
+          <div class="form__element">
+            <label class="form__label" for="lName">Last Name:</label>
+            <input class="form__input" type="text" name="lName" id="lName" />
+          </div>
+        </div>
+        <!-- <div class="form__group"> -->
+        <p>Favourite type of pickle:</p>
+        <div class="form__group--radio">
+          <label for="onions">Onions</label
+          ><input type="radio" name="pickle" id="onions" />
+        </div>
+        <div class="form__group--radio">
+          <label for="eggs">Eggs</label
+          ><input type="radio" name="pickle" id="eggs" />
+        </div>
+        <div class="form__group--radio">
+          <label for="rick">Rick</label
+          ><input type="radio" name="pickle" id="rick" />
+        </div>
+        <!-- </div> -->
+        <button class="btn" type="submit">Submit</button>
+      </form>
+    </div>
+    <footer>
+      <a href="https://stargate.fandom.com/wiki/Daniel_Jackson"
+        >More about me...</a
+      >
+      <a href="https://www.imdb.com/title/tt0118480/"
+        >A documentary about my life.</a
+      >
+    </footer>
+  </body>
+</html>
