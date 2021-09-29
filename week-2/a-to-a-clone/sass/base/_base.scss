@@ -1,0 +1,23 @@
+:root {
+  --white-colour: rgb(255, 255, 255);
+  --dark-blue-colour: rgb(27, 41, 56);
+  --text-colour: rgb(20, 20, 20);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+  font-family: 'Nunito sans', sans-serif;
+  color: var(--text-colour);
+}
+
+body {
+  box-sizing: border-box;
+}

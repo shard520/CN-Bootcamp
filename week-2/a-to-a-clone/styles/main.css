@@ -1,0 +1,70 @@
+:root {
+  --white-colour: rgb(255, 255, 255);
+  --dark-blue-colour: rgb(27, 41, 56);
+  --text-colour: rgb(20, 20, 20);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Nunito sans", sans-serif;
+  color: var(--text-colour);
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 5.5rem;
+  gap: 3rem;
+}
+.navbar__logo {
+  max-width: 25rem;
+  height: 100%;
+  width: 100%;
+}
+.navbar__list {
+  display: flex;
+  gap: 2rem;
+  margin: 2.5rem 0;
+}
+.navbar__list-item {
+  list-style: none;
+  font-size: 1.7rem;
+}
+.navbar__dropdown-icon {
+  width: 0.85rem;
+  height: 0.85rem;
+  fill: var(--text-colour);
+}
+.navbar__icon-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 2rem;
+}
+.navbar__icons {
+  width: 2rem;
+  height: 2rem;
+}
+
+.shipping-banner {
+  background-color: var(--dark-blue-colour);
+  color: var(--white-colour);
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.8rem;
+}/*# sourceMappingURL=main.css.map */
