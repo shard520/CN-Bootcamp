@@ -134,6 +134,63 @@ h6 {
   margin-top: 2.75rem;
 }
 
+.most-popular {
+  padding: 5.5rem;
+}
+.most-popular__heading {
+  text-align: center;
+  font-size: 2.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-weight: 400;
+  margin-bottom: 5.5rem;
+}
+.most-popular__container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 3rem;
+}
+.most-popular__item {
+  width: 100%;
+}
+.most-popular__img {
+  max-width: 25rem;
+  max-height: 25rem;
+  width: 100%;
+  margin-bottom: 0.9rem;
+  transition: opacity 0.2s;
+}
+.most-popular__item:hover > .most-popular__img {
+  opacity: 0.8;
+}
+.most-popular__title {
+  display: inline;
+  font-size: 2.3rem;
+  font-family: var(--font-decorative);
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.2s;
+}
+.most-popular__item:hover > .most-popular__title {
+  border-bottom-color: var(--text-colour);
+}
+.most-popular__review-box {
+  line-height: 2.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.3rem;
+}
+.most-popular__review-box > .review__star-box {
+  margin-top: -0.3rem;
+}
+.most-popular__review-count {
+  font-size: 1.7rem;
+}
+.most-popular__cost {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
 .navbar {
   display: flex;
   justify-content: space-around;
@@ -170,6 +227,17 @@ h6 {
 .navbar__icons {
   width: 2rem;
   height: 2rem;
+}
+
+.review__star-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.4rem;
+}
+.review__star-icon {
+  width: 1.7rem;
+  height: 1.7rem;
 }
 
 .shipping-banner {

@@ -1,0 +1,13 @@
+.review {
+  &__star-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  &__star-icon {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+}
