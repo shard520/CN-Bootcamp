@@ -12,6 +12,7 @@
   // FONTS
   --font-decorative: 'Roboto', sans-serif;
   --font-main: 'Nunito Sans', sans-serif;
+  --default-font-size: 1.9rem;
   --text-shadow: 0 0 4px rgb(0 0 0 / 40%);
 }
 
@@ -31,4 +32,6 @@ html {
 
 body {
   box-sizing: border-box;
+  font-size: var(--default-font-size);
+  -webkit-font-smoothing: antialiased;
 }
