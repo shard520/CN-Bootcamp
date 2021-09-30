@@ -5,9 +5,12 @@
   --dark-blue-colour: rgb(27, 41, 56);
   --text-colour: rgb(20, 20, 20);
   --image-overlay-rgb: 27, 41, 56;
-  --image-overlay-opacity: 0.15;
   --main-accent-colour: rgb(44, 165, 141);
   --main-accent-colour-hover: rgb(33, 125, 107);
+
+  // OPACITY
+  --image-overlay-opacity: 0.15;
+  --hover-overlay-opacity: 0.55;
 
   // FONTS
   --font-decorative: 'Roboto', sans-serif;
