@@ -1,5 +1,7 @@
 .collections-feature {
-  padding: 5.5rem;
+  max-width: var(--page-width);
+  margin: auto;
+  padding: var(--big-space);
   display: flex;
   align-items: center;
 
@@ -11,7 +13,7 @@
 
   &__heading {
     font-family: var(--font-decorative);
-    font-size: 3.5rem;
+    font-size: 3.4rem;
     font-weight: 400;
     margin-bottom: 1.75rem;
   }
