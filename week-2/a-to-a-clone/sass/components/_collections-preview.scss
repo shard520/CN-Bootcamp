@@ -1,0 +1,58 @@
+.collections-preview {
+  padding: 5.5rem;
+
+  &__heading {
+    text-align: center;
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    font-weight: 400;
+    margin-bottom: 5.5rem;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3rem;
+  }
+
+  &__item {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 230px;
+    width: 230px;
+
+    &--hcnb {
+      background-image: url('../img/collection-hard-cover.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+
+    &--scnb {
+      background-image: url('../img/collection-soft-cover.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+
+    &--mugs {
+      background-image: url('../img/collection-china-mug.jpeg');
+      background-position: center;
+      background-size: cover;
+    }
+
+    &--prints {
+      background-image: url('../img/collection-dig-print.jpeg');
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  &__link:link {
+    text-decoration: none;
+    color: var(--white-colour);
+  }
+}

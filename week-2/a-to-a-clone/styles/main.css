@@ -90,11 +90,63 @@ h6 {
   max-width: 40rem;
 }
 
+.collections-preview {
+  padding: 5.5rem;
+}
+.collections-preview__heading {
+  text-align: center;
+  font-size: 2.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-weight: 400;
+  margin-bottom: 5.5rem;
+}
+.collections-preview__container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 3rem;
+}
+.collections-preview__item {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 230px;
+  width: 230px;
+}
+.collections-preview__item--hcnb {
+  background-image: url("../img/collection-hard-cover.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.collections-preview__item--scnb {
+  background-image: url("../img/collection-soft-cover.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.collections-preview__item--mugs {
+  background-image: url("../img/collection-china-mug.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+.collections-preview__item--prints {
+  background-image: url("../img/collection-dig-print.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+.collections-preview__link:link {
+  text-decoration: none;
+  color: var(--white-colour);
+}
+
 .hero {
   height: 44.444vw;
   max-height: 80vh;
+  width: 100vw;
   aspect-ratio: 9/4;
-  background-image: url("/img/hero-img.jpg");
+  background-image: url("../img/hero-img.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

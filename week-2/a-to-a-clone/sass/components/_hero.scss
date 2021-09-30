@@ -1,8 +1,9 @@
 .hero {
   height: 44.444vw;
   max-height: 80vh;
+  width: 100vw;
   aspect-ratio: 9 / 4;
-  background-image: url('/img/hero-img.jpg');
+  background-image: url('../img/hero-img.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
