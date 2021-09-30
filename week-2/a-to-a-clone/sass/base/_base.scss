@@ -1,7 +1,18 @@
 :root {
+  // COLOURS
   --white-colour: rgb(255, 255, 255);
+  --light-grey-colour: rgb(240, 240, 240);
   --dark-blue-colour: rgb(27, 41, 56);
   --text-colour: rgb(20, 20, 20);
+  --image-overlay-rgb: 27, 41, 56;
+  --image-overlay-opacity: 0.15;
+  --main-accent-colour: rgb(44, 165, 141);
+  --main-accent-colour-hover: rgb(33, 125, 107);
+
+  // FONTS
+  --font-decorative: 'Roboto', sans-serif;
+  --font-main: 'Nunito Sans', sans-serif;
+  --text-shadow: 0 0 4px rgb(0 0 0 / 40%);
 }
 
 *,
@@ -14,7 +25,7 @@
 
 html {
   font-size: 62.5%; // 1rem = 10px
-  font-family: 'Nunito sans', sans-serif;
+  font-family: var(--font-main);
   color: var(--text-colour);
 }
 

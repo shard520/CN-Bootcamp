@@ -1,7 +1,15 @@
 :root {
   --white-colour: rgb(255, 255, 255);
+  --light-grey-colour: rgb(240, 240, 240);
   --dark-blue-colour: rgb(27, 41, 56);
   --text-colour: rgb(20, 20, 20);
+  --image-overlay-rgb: 27, 41, 56;
+  --image-overlay-opacity: 0.15;
+  --main-accent-colour: rgb(44, 165, 141);
+  --main-accent-colour-hover: rgb(33, 125, 107);
+  --font-decorative: "Roboto", sans-serif;
+  --font-main: "Nunito Sans", sans-serif;
+  --text-shadow: 0 0 4px rgb(0 0 0 / 40%);
 }
 
 *,
@@ -14,12 +22,84 @@
 
 html {
   font-size: 62.5%;
-  font-family: "Nunito sans", sans-serif;
+  font-family: var(--font-main);
   color: var(--text-colour);
 }
 
 body {
   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-decorative);
+}
+
+.btn {
+  font-family: var(--font-decorative);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+  line-height: 2.25rem;
+  background-color: var(--main-accent-colour);
+  color: var(--light-grey-colour);
+  cursor: pointer;
+  padding: 1rem 1.8rem;
+  border: 1px solid transparent;
+  border-radius: 0.2rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+.btn:hover {
+  background-color: var(--main-accent-colour-hover);
+  color: var(--white-colour);
+}
+
+.hero {
+  height: 44.444vw;
+  max-height: 80vh;
+  aspect-ratio: 9/4;
+  background-image: url("/img/hero-img.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 5.5rem;
+}
+.hero:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(var(--image-overlay-rgb), var(--image-overlay-opacity));
+}
+.hero__inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  flex-direction: column;
+}
+.hero__heading {
+  font-size: 4.5rem;
+  font-weight: 300;
+  color: var(--white-colour);
+  margin-bottom: 0.8rem;
+  text-shadow: var(--text-shadow);
+}
+.hero__subtitle {
+  font-family: var(--font-main);
+  font-size: 2rem;
+  color: var(--white-colour);
+  text-shadow: var(--text-shadow);
+}
+.hero__cta-btn {
+  margin-top: 2.75rem;
 }
 
 .navbar {
