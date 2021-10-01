@@ -16,6 +16,20 @@
     &--right {
       padding-right: 0;
     }
+
+    &--stretch {
+      align-self: stretch;
+    }
+  }
+
+  // These styles only have an effect when the --stretch
+  // modifier class is applied to the parent
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    height: 100%;
   }
 
   &__heading {

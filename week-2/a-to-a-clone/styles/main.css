@@ -158,6 +158,16 @@ h6 {
 .feature__text--right {
   padding-right: 0;
 }
+.feature__text--stretch {
+  align-self: stretch;
+}
+.feature__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
+  height: 100%;
+}
 .feature__heading {
   font-family: var(--font-decorative);
   font-size: 3.4rem;
