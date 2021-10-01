@@ -278,7 +278,7 @@ h6 {
 
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 0 var(--big-space);
   gap: 3rem;
@@ -290,24 +290,30 @@ h6 {
 }
 .navbar__list {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   margin: 2.5rem 0;
+  margin-right: calc((100vw / 3) / 3);
 }
 .navbar__list-item {
   list-style: none;
   font-size: 1.7rem;
+  padding: 0.3rem 0;
 }
 .navbar__dropdown-icon {
   width: 0.85rem;
   height: 0.85rem;
   fill: var(--text-colour);
+  margin-left: 0.4rem;
 }
 .navbar__icon-list {
   list-style: none;
   display: flex;
   align-items: center;
-  margin-left: auto;
   gap: 2rem;
+}
+.navbar__icon-list-item {
+  display: flex;
+  align-items: center;
 }
 .navbar__icons {
   width: 2rem;
