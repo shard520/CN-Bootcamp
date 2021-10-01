@@ -4,12 +4,7 @@
   padding: var(--big-space);
 
   &__heading {
-    text-align: center;
-    font-size: 2.6rem;
-    text-transform: uppercase;
-    letter-spacing: 0.25rem;
-    font-weight: 400;
-    margin-bottom: var(--big-space);
+    @include section-heading;
   }
 
   &__container {

@@ -3,6 +3,7 @@
   --light-grey-colour: rgb(240, 240, 240);
   --dark-blue-colour: rgb(27, 41, 56);
   --text-colour: rgb(20, 20, 20);
+  --text-hover-colour: rgb(84, 84, 84);
   --image-overlay-rgb: 27, 41, 56;
   --main-accent-colour: rgb(44, 165, 141);
   --main-accent-colour-hover: rgb(33, 125, 107);
@@ -225,6 +226,7 @@ h6 {
 .most-popular__heading {
   text-align: center;
   font-size: 2.6rem;
+  line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
   font-weight: 400;
@@ -320,6 +322,44 @@ h6 {
   height: 2rem;
 }
 
+.review {
+  width: 90%;
+  margin: auto;
+  max-width: 192rem;
+  padding: 4.8rem 0;
+}
+.review__heading {
+  text-align: center;
+  font-size: 2.6rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-weight: 400;
+  margin-bottom: var(--big-space);
+  margin-bottom: 2.4rem;
+}
+.review__container {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.review__chevron-box {
+  align-self: center;
+}
+.review__chevron {
+  width: 3.5rem;
+  height: 3.5rem;
+  fill: var(--text-colour);
+}
+.review__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 33.3333%;
+  font-size: 1.7rem;
+  line-height: 1.4;
+  padding: 0 2.4rem;
+}
 .review__star-box {
   display: flex;
   justify-content: flex-start;
@@ -329,6 +369,44 @@ h6 {
 .review__star-icon {
   width: 1.7rem;
   height: 1.7rem;
+}
+.review__item .review__star-icon {
+  width: 2rem;
+  height: 2rem;
+}
+.review__title {
+  font-weight: 700;
+  margin: 0.6rem 0 0.2rem;
+}
+.review__text {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 100%;
+  margin-bottom: 1rem;
+}
+.review__details {
+  padding-bottom: 0.6rem;
+}
+.review__name {
+  font-size: 90%;
+  opacity: 0.6;
+  line-height: 1;
+  padding-bottom: 0.2rem;
+}
+.review__date {
+  font-size: 75%;
+  font-style: italic;
+  opacity: 0.35;
+  line-height: 1;
+}
+.review__product {
+  font-size: 90%;
+}
+.review__product:hover {
+  color: var(--text-hover-colour);
 }
 
 .shipping-banner {
