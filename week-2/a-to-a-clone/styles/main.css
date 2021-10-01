@@ -7,6 +7,7 @@
   --image-overlay-rgb: 27, 41, 56;
   --main-accent-colour: rgb(44, 165, 141);
   --main-accent-colour-hover: rgb(33, 125, 107);
+  --background-colour-alt: rgba(20, 20, 20, 0.05);
   --image-overlay-opacity: 0.15;
   --hover-overlay-opacity: 0.55;
   --font-decorative: "Roboto", sans-serif;
@@ -325,6 +326,55 @@ h6 {
 .navbar__icons {
   width: 2rem;
   height: 2rem;
+}
+
+.newsletter-signup {
+  margin-top: var(--big-space);
+  background-color: var(--background-colour-alt);
+}
+.newsletter-signup__container {
+  max-width: var(--page-width);
+  margin: auto;
+  padding-top: var(--big-space);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.newsletter-signup__heading {
+  text-align: center;
+  font-size: 2.6rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-weight: 400;
+  margin-bottom: var(--big-space);
+  margin-bottom: 1.75rem;
+}
+.newsletter-signup__text {
+  font-size: 1.7rem;
+  margin-bottom: var(--big-space);
+}
+.newsletter-signup__form {
+  width: 100%;
+  padding-bottom: var(--big-space);
+  max-width: 56rem;
+}
+.newsletter-signup__input-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.6rem;
+}
+.newsletter-signup__input {
+  width: 100%;
+  font-size: 1.7rem;
+  font-family: var(--font-main);
+  padding: 1rem 1.8rem;
+  border-radius: 0.2rem 0 0 0.2rem;
+  line-height: 1.2;
+  border: 1px solid var(--dark-blue-colour);
+}
+.newsletter-signup__submit-btn {
+  flex-grow: 0;
 }
 
 .review {
