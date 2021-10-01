@@ -149,8 +149,13 @@ h6 {
 }
 .feature__text {
   padding: 3.5rem;
-  padding-left: 0;
   flex: 0 1 50%;
+}
+.feature__text--left {
+  padding-left: 0;
+}
+.feature__text--right {
+  padding-right: 0;
 }
 .feature__heading {
   font-family: var(--font-decorative);
