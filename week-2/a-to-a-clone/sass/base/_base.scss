@@ -5,7 +5,9 @@
   --dark-blue-colour: rgb(27, 41, 56);
   --text-colour: rgb(20, 20, 20);
   --text-hover-colour: rgb(84, 84, 84);
+  --grey-text-colour: rgb(69, 69, 69);
   --image-overlay-rgb: 27, 41, 56;
+  --blue-img-overlay: rgba(80, 121, 165, 0.73);
   --main-accent-colour: rgb(44, 165, 141);
   --main-accent-colour-hover: rgb(33, 125, 107);
   --background-colour-alt: rgba(20, 20, 20, 0.05);
@@ -23,6 +25,9 @@
   // SIZES
   --page-width: 120rem;
   --big-space: 5.5rem;
+
+  // ANIMATION
+  --widget-animation-timing: cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 *,
