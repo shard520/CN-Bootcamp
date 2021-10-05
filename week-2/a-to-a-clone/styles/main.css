@@ -51,6 +51,15 @@ h6 {
   font-family: var(--font-decorative);
 }
 
+.u-hidden {
+  visibility: hidden !important;
+}
+
+.u-no-dimensions {
+  width: 0px !important;
+  height: 0px !important;
+}
+
 .btn {
   font-family: var(--font-decorative);
   font-size: 1.5rem;
