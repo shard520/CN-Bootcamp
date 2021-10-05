@@ -199,6 +199,19 @@ h6 {
   max-width: 40rem;
 }
 
+.footer {
+  background-color: var(--dark-blue-colour);
+  color: var(--light-grey-colour);
+}
+.footer__payment-icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__payment-icon {
+  width: 3.8rem;
+  height: 2.4rem;
+}
 .hero {
   height: 44.444vw;
   max-height: 80vh;

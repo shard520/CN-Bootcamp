@@ -1,0 +1,67 @@
+.footer {
+  background-color: var(--dark-blue-colour);
+  color: var(--light-grey-colour);
+
+  &__contact-container {
+  }
+
+  &__nav {
+  }
+
+  &__nav-header {
+  }
+
+  &__nav-list {
+  }
+
+  &__nav-item {
+  }
+
+  &__email-signup {
+  }
+
+  &__separator {
+  }
+
+  &__payments-container {
+  }
+
+  &__currency-selector-box {
+    &--large {
+    }
+  }
+
+  &__currency-selector-label {
+  }
+
+  &__currency-selection {
+    &--large {
+    }
+  }
+
+  &__currency-selection-option {
+  }
+
+  &__payment-icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__payment-icon {
+    width: 3.8rem;
+    height: 2.4rem;
+  }
+
+  &__socials-container {
+  }
+
+  &__socials-icon {
+  }
+
+  &__copyright {
+  }
+
+  &__copyright-text {
+  }
+}
