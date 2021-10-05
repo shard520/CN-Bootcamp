@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keycode Generator</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="main.css" />
+
+    <!-- SCRIPT -->
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <div class="key-number u-font-size-md">
+        Press a key to see the event keycode
+      </div>
+      <div class="info-container u-display-none">
+        <div class="info-wrapper">
+          <div class="info">event.key</div>
+          <div id="eventKey" class="info-value">h</div>
+        </div>
+        <div class="info-wrapper">
+          <div class="info">event.code</div>
+          <div id="eventCode" class="info-value">KeyH</div>
+        </div>
+        <div class="info-wrapper">
+          <div class="info">event.which</div>
+          <div id="eventWhich" class="info-value">72</div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
