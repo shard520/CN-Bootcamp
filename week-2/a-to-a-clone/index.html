@@ -20,7 +20,7 @@
   </head>
   <body>
     <div class="shipping-banner">FREE UK SHIPPING OVER £45</div>
-    <nav class="navbar">
+    <nav aria-label="Main Navigation" class="navbar">
       <img
         src="img/nav-logo.png"
         alt="Atoms to Astronauts logo"
@@ -609,5 +609,39 @@
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer__contact-container">
+        <nav aria-label="Quick Links" class="footer__nav">
+          <h3 class="footer__nav-header">Quick Links</h3>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">Search</li>
+            <li class="footer__nav-item">Our Story</li>
+            <li class="footer__nav-item">Shipping & Delivery</li>
+            <li class="footer__nav-item">Sustainability</li>
+            <li class="footer__nav-item">Contact Us</li>
+            <li class="footer__nav-item">Returns Policy</li>
+            <li class="footer__nav-item">Privacy Policy</li>
+          </ul>
+        </nav>
+        <div class="footer__email-signup">
+          <h3 class="newsletter-signup__heading">
+            Enter your email for 10% off your first order
+          </h3>
+          <form class="newsletter-signup__form">
+            <div class="newsletter-signup__input-group">
+              <input
+                type="email"
+                placeholder="Email address"
+                class="newsletter-signup__input"
+              />
+              <button class="btn newsletter-signup__submit-btn">
+                Subscribe
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr class="footer__separator" />
+    </footer>
   </body>
 </html>
