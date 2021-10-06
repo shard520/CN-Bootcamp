@@ -1,15 +1,110 @@
+:root {
+  --white-colour: rgb(230, 230, 230);
+  --white-colour-rgb: 230, 230, 230;
+}
+
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  font-family: inherit;
 }
 
 html {
-  font-family: sans-serif;
+  font-size: 62.5%; /* 10px = 1rem */
+  font-family: 'Quicksand', sans-serif;
 }
 
 body {
   box-sizing: border-box;
+}
+
+.main {
+  background-image: linear-gradient(
+      to right,
+      rgba(15, 0, 0, 0.5),
+      rgba(15, 0, 0, 0.8)
+    ),
+    url(bg-img.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.container {
+  max-width: 120rem;
+  margin: auto;
+  color: var(--white-colour);
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+.heading {
+  font-size: 6rem;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+  margin-top: 10rem;
+}
+
+.drum__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.drum__pad {
+  position: relative;
+  flex-basis: 30%;
+  border: 0.3rem solid var(--white-colour);
+  border-radius: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  color: currentColor;
+  background-color: transparent;
+  align-self: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.drum__pad:hover.drum__pad::before,
+.drum__pad:focus.drum__pad::before {
+  opacity: 1;
+}
+
+.drum__pad::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 1rem 0.3rem rgba(var(--white-colour-rgb), 0.5);
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 0.2s ease;
+}
+
+.drum__label {
+  position: relative;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  flex-basis: 100%;
+}
+
+.drum__key {
+  position: relative;
+  font-size: 4rem;
+  font-weight: 700;
+  align-self: flex-end;
 }
