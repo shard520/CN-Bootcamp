@@ -1,4 +1,3 @@
-// DRUM CONTAINER ELEMENT
 const drumContainer = document.querySelector('.drum__container');
 
 // AUDIO OBJECTS
