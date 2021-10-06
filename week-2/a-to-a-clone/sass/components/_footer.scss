@@ -1,7 +1,6 @@
 .footer {
   background-color: var(--dark-blue-colour);
   color: var(--light-grey-colour);
-  position: relative;
 
   &__wrapper {
     max-width: var(--page-width);
@@ -22,7 +21,6 @@
     flex-direction: column;
     align-items: center;
     flex-basis: 50%;
-    margin-bottom: 4.5rem;
 
     &--left {
       padding-right: 1.5rem;
@@ -32,18 +30,28 @@
       padding-left: 1.5rem;
     }
 
+    &--align-start {
+      align-items: flex-start;
+    }
+
+    &--align-end {
+      align-items: flex-end;
+    }
+
     & .newsletter-signup__heading {
       font-size: 2.3rem;
       text-align: left;
       letter-spacing: unset;
+      margin-bottom: 2.5rem;
+    }
+
+    & .newsletter-signup__form {
+      padding-bottom: 3rem;
     }
 
     & .newsletter-signup__input-group {
       margin-top: 0.5rem;
     }
-  }
-
-  &__nav {
   }
 
   &__nav-header {
@@ -60,40 +68,46 @@
   }
 
   &__nav-item {
-    padding: 0 3rem 0.5rem 0;
+    margin: 0 3rem 0.5rem 0;
     font-size: 1.7rem;
+    border-bottom: 1px solid transparent;
+    transform: colour 0.2s ease, border-bottom 0.2s ease;
+
+    &:hover {
+      color: var(--footer-hover-colour);
+      border-bottom: 1px solid var(--footer-hover-colour);
+    }
   }
 
   &__separator {
     border: 0;
     border-bottom: 1px solid var(--footer-separator-colour);
-    margin: 4.5rem 0 2rem;
-    position: absolute;
-    width: 100vw;
-    top: 50%;
-    left: 0;
-  }
-
-  &__currency-selector-box {
-    &--large {
-    }
-  }
-
-  &__currency-selector-label {
   }
 
   &__currency-selection {
-    &--large {
-    }
-  }
+    padding-top: 0.9rem;
+    padding-left: 1.3rem;
+    padding-bottom: 0.9rem;
+    margin-bottom: 2rem;
+    font-size: 1.7rem;
+    line-height: 1.2rem;
+    color: var(--grey-text-colour);
+    border: 1px solid var(--dark-blue-colour);
+    border-radius: 0.2rem;
 
-  &__currency-selection-option {
+    &--large {
+      padding: 0.5rem 2.8rem 0.5rem 0.8rem;
+      margin-bottom: 0;
+      font-size: 1.6rem;
+    }
   }
 
   &__payment-icon-box {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 0.5rem;
+    margin-bottom: var(--big-space);
   }
 
   &__payment-icon {
@@ -105,18 +119,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 3rem;
+    margin-top: 0.75rem;
+    margin-bottom: 2.5rem;
   }
 
   &__socials-icon {
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     fill: currentColor;
-  }
+    transition: fill 0.2s ease;
 
-  &__copyright {
+    &:hover {
+      fill: var(--footer-hover-colour);
+    }
   }
 
   &__copyright-text {
+    font-size: 1.4rem;
   }
 }

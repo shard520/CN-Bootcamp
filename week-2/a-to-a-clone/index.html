@@ -614,7 +614,7 @@
         <div class="footer__top">
           <div class="footer__item footer__item--left">
             <nav aria-label="Quick Links" class="footer__nav">
-              <h3 class="footer__nav-header">Quick Links</h3>
+              <h3 class="footer__nav-header">Quick links</h3>
               <ul class="footer__nav-list">
                 <li class="footer__nav-item">Search</li>
                 <li class="footer__nav-item">Our Story</li>
@@ -644,47 +644,51 @@
             </form>
           </div>
         </div>
-        <hr class="footer__separator" />
+      </div>
+      <hr class="footer__separator" />
+      <div class="footer__wrapper u-padding-top-2">
         <div class="footer__bottom">
-          <div class="footer__item">
+          <div
+            class="footer__item footer__item--left footer__item--align-start"
+          >
             <div class="footer__currency-selector-box">
               <label
                 for="currencySelection"
-                class="footer__currency-selector-label u-hidden u-no-dimensions"
+                class="footer__currency-selector-label u-sr-only"
                 >Select your currency</label
               ><select
                 name="currencySelection"
                 id="currencySelection"
                 class="footer__currency-selection"
               >
+                <option value="AUD $" class="footer__currency-selection-option">
+                  AUD $
+                </option>
+                <option value="CAD $" class="footer__currency-selection-option">
+                  CAD $
+                </option>
+                <option value="EUR €" class="footer__currency-selection-option">
+                  EUR €
+                </option>
                 <option
-                  value="AUD $"
-                  class="footer__currency-selection-option"
-                ></option>
-                <option
-                  value="CAD $"
-                  class="footer__currency-selection-option"
-                ></option>
-                <option
-                  value="EUR €"
-                  class="footer__currency-selection-option"
-                ></option>
-                <option
+                  selected
                   value="GBP £"
                   class="footer__currency-selection-option"
-                ></option>
-                <option
-                  value="MDL L"
-                  class="footer__currency-selection-option"
-                ></option>
+                >
+                  GBP £
+                </option>
+                <option value="MDL L" class="footer__currency-selection-option">
+                  MDL L
+                </option>
                 <option
                   value="RON Lei"
                   class="footer__currency-selection-option"
-                ></option>
-                <option
-                  value="USD $"
-                  class="footer__currency-selection-option"
-                ></option>
+                >
+                  RON Lei
+                </option>
+                <option value="USD $" class="footer__currency-selection-option">
+                  USD $
+                </option>
               </select>
             </div>
             <div class="footer__payment-icon-box">
@@ -757,7 +761,7 @@
             >
               <label
                 for="currencySelectionLarge"
-                class="footer__currency-selector-label u-hidden u-no-dimensions"
+                class="footer__currency-selector-label u-sr-only"
                 >Select your currency</label
               ><select
                 name="currencySelectionLarge"
@@ -769,35 +773,56 @@
                 <option
                   value="Australia (AUD $)"
                   class="footer__currency-selection-option"
-                ></option>
+                >
+                  Australia (AUD $)
+                </option>
                 <option
                   value="Canada (CAD $)"
                   class="footer__currency-selection-option"
-                ></option>
+                >
+                  Canada (CAD $)
+                </option>
                 <option
                   value="France (EUR €)"
                   class="footer__currency-selection-option"
-                ></option>
+                >
+                  France (EUR €)
+                </option>
                 <option
+                  value="French Southern Territories (EUR €)"
+                  class="footer__currency-selection-option"
+                >
+                  French Southern Territories (EUR €)
+                </option>
+                <option
+                  selected
                   value="United Kingdom (GBP £)"
                   class="footer__currency-selection-option"
-                ></option>
+                >
+                  United Kingdom (GBP £)
+                </option>
                 <option
                   value="Moldova (MDL L)"
                   class="footer__currency-selection-option"
-                ></option>
+                >
+                  Moldova (MDL L)
+                </option>
                 <option
                   value="Romania (RON Lei)"
                   class="footer__currency-selection-option"
-                ></option>
+                >
+                  Romania (RON Lei)
+                </option>
                 <option
                   value="United States (USD $)"
                   class="footer__currency-selection-option"
-                ></option>
+                >
+                  United States (USD $)
+                </option>
               </select>
             </div>
           </div>
-          <div class="footer__item">
+          <div class="footer__item footer__item--right footer__item--align-end">
             <div class="footer__socials-container">
               <svg
                 version="1.1"
