@@ -71,7 +71,7 @@
     margin: 0 3rem 0.5rem 0;
     font-size: 1.7rem;
     border-bottom: 1px solid transparent;
-    transform: colour 0.2s ease, border-bottom 0.2s ease;
+    transition: colour 0.2s ease, border-bottom 0.2s ease;
 
     &:hover {
       color: var(--footer-hover-colour);
@@ -92,6 +92,7 @@
     font-size: 1.7rem;
     line-height: 1.2rem;
     color: var(--grey-text-colour);
+    background-color: var(--white-colour);
     border: 1px solid var(--dark-blue-colour);
     border-radius: 0.2rem;
 
