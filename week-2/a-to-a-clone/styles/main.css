@@ -10,6 +10,7 @@
   --main-accent-colour: rgb(44, 165, 141);
   --main-accent-colour-hover: rgb(33, 125, 107);
   --background-colour-alt: rgba(20, 20, 20, 0.05);
+  --footer-separator-colour: rgb(10, 16, 22);
   --image-overlay-opacity: 0.15;
   --hover-overlay-opacity: 0.55;
   --font-decorative: "Roboto", sans-serif;
@@ -202,6 +203,63 @@ h6 {
 .footer {
   background-color: var(--dark-blue-colour);
   color: var(--light-grey-colour);
+  position: relative;
+}
+.footer__wrapper {
+  max-width: var(--page-width);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 4.5rem 5.5rem;
+}
+.footer__top, .footer__bottom {
+  flex-basis: 50%;
+  display: flex;
+}
+.footer__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 50%;
+  margin-bottom: 4.5rem;
+}
+.footer__item--left {
+  padding-right: 1.5rem;
+}
+.footer__item--right {
+  padding-left: 1.5rem;
+}
+.footer__item .newsletter-signup__heading {
+  font-size: 2.3rem;
+  text-align: left;
+  letter-spacing: unset;
+}
+.footer__item .newsletter-signup__input-group {
+  margin-top: 0.5rem;
+}
+.footer__nav-header {
+  font-family: var(--font-decorative);
+  font-size: 2.3rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.footer__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.footer__nav-item {
+  padding: 0 3rem 0.5rem 0;
+  font-size: 1.7rem;
+}
+.footer__separator {
+  border: 0;
+  border-bottom: 1px solid var(--footer-separator-colour);
+  margin: 4.5rem 0 2rem;
+  position: absolute;
+  width: 100vw;
+  top: 50%;
+  left: 0;
 }
 .footer__payment-icon-box {
   display: flex;
@@ -211,6 +269,17 @@ h6 {
 .footer__payment-icon {
   width: 3.8rem;
   height: 2.4rem;
+}
+.footer__socials-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.footer__socials-icon {
+  width: 2rem;
+  height: 2rem;
+  fill: currentColor;
 }
 .hero {
   height: 44.444vw;
@@ -261,7 +330,7 @@ h6 {
 
 .instagram-widget {
   max-width: 120rem;
-  margin: 0.9rem auto 3.2rem auto;
+  margin: 0.9rem auto 5rem auto;
 }
 .instagram-widget__heading {
   text-align: center;

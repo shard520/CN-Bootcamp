@@ -1,29 +1,77 @@
 .footer {
   background-color: var(--dark-blue-colour);
   color: var(--light-grey-colour);
+  position: relative;
 
-  &__contact-container {
+  &__wrapper {
+    max-width: var(--page-width);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 4.5rem 5.5rem;
+  }
+
+  &__top,
+  &__bottom {
+    flex-basis: 50%;
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 50%;
+    margin-bottom: 4.5rem;
+
+    &--left {
+      padding-right: 1.5rem;
+    }
+
+    &--right {
+      padding-left: 1.5rem;
+    }
+
+    & .newsletter-signup__heading {
+      font-size: 2.3rem;
+      text-align: left;
+      letter-spacing: unset;
+    }
+
+    & .newsletter-signup__input-group {
+      margin-top: 0.5rem;
+    }
   }
 
   &__nav {
   }
 
   &__nav-header {
+    font-family: var(--font-decorative);
+    font-size: 2.3rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
   }
 
   &__nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
   }
 
   &__nav-item {
-  }
-
-  &__email-signup {
+    padding: 0 3rem 0.5rem 0;
+    font-size: 1.7rem;
   }
 
   &__separator {
-  }
-
-  &__payments-container {
+    border: 0;
+    border-bottom: 1px solid var(--footer-separator-colour);
+    margin: 4.5rem 0 2rem;
+    position: absolute;
+    width: 100vw;
+    top: 50%;
+    left: 0;
   }
 
   &__currency-selector-box {
@@ -54,9 +102,16 @@
   }
 
   &__socials-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
   }
 
   &__socials-icon {
+    width: 2rem;
+    height: 2rem;
+    fill: currentColor;
   }
 
   &__copyright {
