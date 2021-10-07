@@ -17,6 +17,7 @@ let player1TotalScore = 0;
 let player2RoundScore = 0;
 let player2TotalScore = 0;
 let currentPlayer = 'player1';
+let maxScore = 0;
 
 // DICE ROLL
 const rollDice = () => {
@@ -47,12 +48,23 @@ const updateTotalScore = currentPlayer => {
   if (currentPlayer === 'player1') {
     player1TotalScore += player1RoundScore;
     player1TotalScoreEl.textContent = player1TotalScore;
+    updateMaxScore(player1TotalScore);
   } else {
     player2TotalScore += player2RoundScore;
     player2TotalScoreEl.textContent = player2TotalScore;
+    updateMaxScore(player2TotalScore);
   }
 
   resetRoundScore(currentPlayer);
+  if (!checkWinner()) switchPlayer();
+};
+
+const updateMaxScore = num => {
+  if (num > maxScore) {
+    maxScore = num;
+  }
+
+  checkWinner();
 };
 
 // RESET SCORES
@@ -81,7 +93,53 @@ const switchPlayer = () => {
   }
 };
 
-// EVENT LISTENERS
-rollBtn.addEventListener('click', () => rollDice());
+// WINNING GAME
+const checkWinner = () => {
+  if (maxScore >= 20) {
+    gameOver();
+    return true;
+  } else return false;
+};
 
+const gameOver = () => {
+  const winner = document.querySelector(`#${currentPlayer}`);
+  const status = document.querySelector(`#${currentPlayer} > .player__status`);
+  status.classList.remove('u-hidden');
+
+  winner.classList.add('player__container--winner');
+
+  // holdBtn.disabled = true;
+  rollBtn.textContent = 'New Game';
+  rollBtn.removeEventListener('click', rollDice);
+  rollBtn.addEventListener('click', init);
+};
+
+// EVENT LISTENERS
 holdBtn.addEventListener('click', () => updateTotalScore(currentPlayer));
+
+// INITIALISE GAME
+const init = () => {
+  player1RoundScore = 0;
+  player1TotalScore = 0;
+  player2RoundScore = 0;
+  player2TotalScore = 0;
+  currentPlayer = 'player1';
+  maxScore = 0;
+
+  player1Container.classList.remove('player__container--winner');
+  player2Container.classList.remove('player__container--winner');
+
+  player1Container.querySelector('.player__status').classList.add('u-hidden');
+  player2Container.querySelector('.player__status').classList.add('u-hidden');
+
+  updateTotalScore('player1');
+  updateTotalScore('player2');
+
+  rollBtn.removeEventListener('click', init);
+  rollBtn.addEventListener('click', rollDice);
+  rollBtn.textContent = 'Roll';
+
+  // holdBtn.disabled = false;
+};
+
+init();
