@@ -127,8 +127,6 @@ const checkWinner = () => {
 
 const gameOver = () => {
   const winner = document.querySelector(`#${currentPlayer}`);
-  const status = getStatus();
-  status.classList.remove('u-hidden');
 
   updateStatus('Winner');
   winner.classList.add('player__container--winner');
