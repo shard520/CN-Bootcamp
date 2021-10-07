@@ -23,8 +23,14 @@ let maxScore = 0;
 const rollDice = () => {
   const num = Math.floor(Math.random() * 6 + 1);
   updateDiceImg(num);
+  dice.classList.remove('u-hidden');
 
-  if (num === 1) return switchPlayer();
+  if (num === 1) {
+    updateStatus('Rolled a 1: Bust');
+    return switchPlayer();
+  } else {
+    getStatus().classList.add('u-hidden');
+  }
 
   updateRoundScore(num, currentPlayer);
 };
@@ -82,6 +88,10 @@ const resetRoundScore = currentPlayer => {
 const switchPlayer = () => {
   resetRoundScore(currentPlayer);
 
+  setTimeout(() => {
+    dice.classList.add('u-hidden');
+  }, 750);
+
   currentPlayer = currentPlayer === 'player1' ? 'player2' : 'player1';
 
   if (currentPlayer === 'player1') {
@@ -91,6 +101,20 @@ const switchPlayer = () => {
     player1Container.classList.remove('player__container--active');
     player2Container.classList.add('player__container--active');
   }
+
+  getStatus().classList.add('u-hidden');
+};
+
+// UPDATE STATUS
+const updateStatus = msg => {
+  const status = getStatus();
+  status.textContent = msg;
+  status.classList.remove('u-hidden');
+};
+
+// GET CURRENT PLAYER STATUS
+const getStatus = () => {
+  return document.querySelector(`#${currentPlayer} > .player__status`);
 };
 
 // WINNING GAME
@@ -103,12 +127,12 @@ const checkWinner = () => {
 
 const gameOver = () => {
   const winner = document.querySelector(`#${currentPlayer}`);
-  const status = document.querySelector(`#${currentPlayer} > .player__status`);
+  const status = getStatus();
   status.classList.remove('u-hidden');
 
+  updateStatus('Winner');
   winner.classList.add('player__container--winner');
 
-  // holdBtn.disabled = true;
   rollBtn.textContent = 'New Game';
   rollBtn.removeEventListener('click', rollDice);
   rollBtn.addEventListener('click', init);
@@ -139,7 +163,7 @@ const init = () => {
   rollBtn.addEventListener('click', rollDice);
   rollBtn.textContent = 'Roll';
 
-  // holdBtn.disabled = false;
+  dice.classList.add('u-hidden');
 };
 
 init();
