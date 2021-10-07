@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Game</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="main.css" />
+
+    <!-- SCRIPT -->
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <main class="main">
+      <section class="container">
+        <h1 class="heading">Dice Game</h1>
+        <div class="game__container">
+          <div class="player__container player__container--active">
+            <h2 class="player__name">Player 1</h2>
+            <h3 class="player__status u-hidden">Winner</h3>
+            <div class="player__scores">
+              <div class="player__score-wrapper">
+                <div class="player__label-round">Round Score</div>
+                <div class="player__round-score">0</div>
+              </div>
+              <div class="player__score-wrapper">
+                <div class="player__label-total">Total Score</div>
+                <div class="player__total-score">0</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="control__container">
+            <button class="btn control__roll">Roll</button>
+            <img src="img/dice-1.png" alt="dice" class="control__dice" />
+            <button class="btn control__hold">Hold</button>
+          </div>
+
+          <div class="player__container">
+            <h2 class="player__name">Player 2</h2>
+            <h3 class="player__status u-hidden">Winner</h3>
+            <div class="player__scores">
+              <div class="player__score-wrapper">
+                <div class="player__label-round">Round Score</div>
+                <div class="player__round-score">0</div>
+              </div>
+              <div class="player__score-wrapper">
+                <div class="player__label-total">Total Score</div>
+                <div class="player__total-score">0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
