@@ -189,5 +189,5 @@ body {
 }
 
 .u-hidden {
-  visibility: hidden;
+  visibility: hidden !important;
 }

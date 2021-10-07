@@ -25,17 +25,21 @@
       <section class="container">
         <h1 class="heading">Dice Game</h1>
         <div class="game__container">
-          <div class="player__container player__container--active">
+          <div id="player1" class="player__container player__container--active">
             <h2 class="player__name">Player 1</h2>
             <h3 class="player__status u-hidden">Winner</h3>
             <div class="player__scores">
               <div class="player__score-wrapper">
                 <div class="player__label-round">Round Score</div>
-                <div class="player__round-score">0</div>
+                <div id="player1RoundScoreEl" class="player__round-score">
+                  0
+                </div>
               </div>
               <div class="player__score-wrapper">
                 <div class="player__label-total">Total Score</div>
-                <div class="player__total-score">0</div>
+                <div id="player1TotalScoreEl" class="player__total-score">
+                  0
+                </div>
               </div>
             </div>
           </div>
@@ -46,17 +50,21 @@
             <button class="btn control__hold">Hold</button>
           </div>
 
-          <div class="player__container">
+          <div id="player2" class="player__container">
             <h2 class="player__name">Player 2</h2>
             <h3 class="player__status u-hidden">Winner</h3>
             <div class="player__scores">
               <div class="player__score-wrapper">
                 <div class="player__label-round">Round Score</div>
-                <div class="player__round-score">0</div>
+                <div id="player2RoundScoreEl" class="player__round-score">
+                  0
+                </div>
               </div>
               <div class="player__score-wrapper">
                 <div class="player__label-total">Total Score</div>
-                <div class="player__total-score">0</div>
+                <div id="player2TotalScoreEl" class="player__total-score">
+                  0
+                </div>
               </div>
             </div>
           </div>
