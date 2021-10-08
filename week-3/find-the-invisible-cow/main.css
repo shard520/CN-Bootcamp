@@ -1,0 +1,55 @@
+:root {
+  --black-colour: rgb(40, 20, 30);
+  --black-colour-rgb: 40, 20, 30;
+  --white-colour: rgb(237, 237, 237);
+  --blue-colour: rgb(53, 66, 247);
+
+  --text-shadow: 2px 2px 0px rgba(240, 240, 240, 0.6);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+html {
+  font-size: 62.5%; /* 10px = 1rem */
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.root {
+  position: relative;
+}
+
+.container.start-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.btn {
+  font-size: 3rem;
+  padding: 1.5rem 3rem;
+  border-radius: 1.5rem;
+  background-color: var(--blue-colour);
+  color: var(--white-colour);
+}
+
+.cow {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
