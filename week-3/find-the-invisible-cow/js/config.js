@@ -1,0 +1,8 @@
+const config = {
+  INITIAL_GAIN_VALUE: 0.5,
+  SCHEDULER_INTERVAL: 25,
+  SCHEDULER_LOOKAHEAD: 0.1,
+  SECONDS_BETWEEN_SOUNDS: 0.3,
+};
+
+export default config;

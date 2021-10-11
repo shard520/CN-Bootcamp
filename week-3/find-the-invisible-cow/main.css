@@ -53,3 +53,27 @@ body {
   left: 0;
   cursor: pointer;
 }
+
+.hidden {
+  opacity: 0;
+}
+
+.game-over {
+  animation: win;
+  animation-duration: 1.5s;
+
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes win {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(3);
+  }
+}
