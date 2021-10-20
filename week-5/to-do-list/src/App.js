@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { CssBaseline, Typography } from '@mui/material/';
 import './App.css';
 
 import AddItem from './components/AddItem';
@@ -26,8 +27,13 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1>To Do List</h1>
+    <div className="app">
+      <CssBaseline />
+
+      <Typography variant="h1" sx={{ textAlign: 'center', mt: 2, mb: 4 }}>
+        To Do List
+      </Typography>
+
       <AddItem value={item} setValue={handleChange} submit={handleSubmit} />
       <div className="items">
         {itemsList.map((item, i) => {
