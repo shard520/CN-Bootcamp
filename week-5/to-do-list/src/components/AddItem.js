@@ -6,7 +6,7 @@ const AddItem = props => {
     <div className="add-item">
       <TextField
         className="text-input"
-        value={props.item}
+        value={props.value}
         onChange={e => props.setValue(e)}
         type="text"
         sx={{ bgcolor: '#fff' }}

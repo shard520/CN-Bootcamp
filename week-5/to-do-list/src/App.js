@@ -17,6 +17,7 @@ function App() {
     const arr = [...itemsList];
     arr.push(item);
     setItemsList(arr);
+    setItem('');
   };
 
   const handleDelete = e => {
