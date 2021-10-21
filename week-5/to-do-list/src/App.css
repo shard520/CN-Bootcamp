@@ -4,7 +4,6 @@
 }
 
 .add-item {
-  width: 50%;
   margin: auto;
   margin-bottom: 2rem;
   display: flex;
@@ -16,8 +15,8 @@
 
 .text-input {
   display: inline-block;
-  width: 100%;
-  flex-basis: 100%;
+  width: 60%;
+  flex-basis: 60%;
 }
 
 .items {

@@ -1,4 +1,5 @@
 import { Button, TextField } from '@mui/material';
+import { AddCircleOutline } from '@mui/icons-material/';
 
 const AddItem = props => {
   return (
@@ -8,9 +9,14 @@ const AddItem = props => {
         value={props.item}
         onChange={e => props.setValue(e)}
         type="text"
+        sx={{ bgcolor: '#fff' }}
       />
-      <Button variant="outlined" onClick={props.submit}>
-        Add Item
+      <Button
+        variant="outlined"
+        sx={{ bgcolor: '#fff' }}
+        onClick={props.submit}
+      >
+        <AddCircleOutline sx={{ fontSize: 40 }} />
       </Button>
     </div>
   );
