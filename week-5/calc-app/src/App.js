@@ -1,14 +1,12 @@
 import { useState } from 'react';
-import { create, all } from 'mathjs';
+import { evaluate } from 'mathjs';
 import { Box, ThemeProvider } from '@mui/system';
 import { createTheme } from '@mui/material';
 
 import './App.css';
 
-import Numbers from './components/Numbers';
 import Display from './components/Display';
-
-const math = create(all);
+import Controls from './components/Controls';
 
 const appTheme = createTheme({
   typography: {
@@ -19,13 +17,24 @@ const appTheme = createTheme({
 function App() {
   const [displayNum, setDisplayNum] = useState('0');
 
-  const handleNumClick = e => {
-    const num = e.target.innerText;
-    let newNum = displayNum + num;
+  const handleClick = e => {
+    const char = e.target.dataset.value;
+
+    let newNum = displayNum + char;
 
     // remove leading 0
     if (newNum[0] === '0') newNum = newNum.substring(1);
     setDisplayNum(newNum);
+  };
+
+  const handleCalc = () => {
+    try {
+      const result = evaluate(displayNum);
+      setDisplayNum(result);
+    } catch (err) {
+      console.error(`💥 💥 ${err}`);
+      setDisplayNum('error');
+    }
   };
 
   return (
@@ -34,7 +43,7 @@ function App() {
         <Box className="app">
           <Box sx={{ width: '60%', ml: 'auto', mr: 'auto' }}>
             <Display displayNum={displayNum} />
-            <Numbers updateDisplayNum={handleNumClick} />
+            <Controls updateDisplay={handleClick} equalsClick={handleCalc} />
           </Box>
         </Box>
       </ThemeProvider>

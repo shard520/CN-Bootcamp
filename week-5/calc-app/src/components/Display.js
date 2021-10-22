@@ -3,7 +3,7 @@ import { Box, ThemeProvider } from '@mui/system';
 
 const displayTheme = createTheme({
   typography: {
-    fontFamily: ['alarm', 'monospace'].join(','),
+    fontFamily: ['digital', 'alarm', 'monospace'].join(','),
     textAlign: 'right',
     fontSize: 40,
   },
