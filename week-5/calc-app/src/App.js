@@ -23,7 +23,7 @@ function App() {
     let newNum = displayNum + char;
 
     // remove leading 0
-    if (newNum[0] === '0') newNum = newNum.substring(1);
+    if (newNum[0] === '0' && newNum[1] !== '.') newNum = newNum.substring(1);
     setDisplayNum(newNum);
   };
 
@@ -37,13 +37,30 @@ function App() {
     }
   };
 
+  const handleReset = () => {
+    setDisplayNum(0);
+  };
+
+  const handleCancel = () => {
+    let numStr = String(displayNum);
+
+    numStr = numStr.slice(0, -1);
+
+    setDisplayNum(numStr);
+  };
+
   return (
     <>
       <ThemeProvider theme={appTheme}>
         <Box className="app">
           <Box sx={{ width: '60%', ml: 'auto', mr: 'auto' }}>
             <Display displayNum={displayNum} />
-            <Controls updateDisplay={handleClick} equalsClick={handleCalc} />
+            <Controls
+              updateDisplay={handleClick}
+              equalsClick={handleCalc}
+              reset={handleReset}
+              cancelEntry={handleCancel}
+            />
           </Box>
         </Box>
       </ThemeProvider>
