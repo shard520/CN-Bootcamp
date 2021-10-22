@@ -8,7 +8,6 @@ const Controls = ({ updateDisplay, equalsClick, reset, cancelEntry }) => {
       sx={{
         display: 'grid',
         gridTemplateColumns: '3fr 2fr',
-        width: '60%',
         ml: 'auto',
         mr: 'auto',
       }}
