@@ -64,7 +64,8 @@ const Operators = ({ updateDisplay, equalsClick, reset, cancelEntry }) => {
       <Button
         sx={{ gridColumn: '2 / span 1', gridRow: '3 / span 2' }}
         data-value="="
-        variant="outlined"
+        variant="contained"
+        disableElevation
         onClick={equalsClick}
       >
         =

@@ -22,6 +22,10 @@ function App() {
 
     let newNum = displayNum + char;
 
+    if (String(newNum).includes('error')) {
+      newNum = newNum.replace('error', '');
+    }
+
     // remove leading 0
     if (newNum[0] === '0' && newNum[1] !== '.') newNum = newNum.substring(1);
     setDisplayNum(newNum);
