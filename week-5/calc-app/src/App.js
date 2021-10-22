@@ -57,7 +57,7 @@ function App() {
     <>
       <ThemeProvider theme={appTheme}>
         <Box className="app">
-          <Box sx={{ width: '60%', ml: 'auto', mr: 'auto' }}>
+          <Box sx={{ width: { xs: '85%', sm: '60%' }, ml: 'auto', mr: 'auto' }}>
             <Display displayNum={displayNum} />
             <Controls
               updateDisplay={handleClick}

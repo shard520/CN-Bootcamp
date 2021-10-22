@@ -7,7 +7,7 @@ const Controls = ({ updateDisplay, equalsClick, reset, cancelEntry }) => {
     <Box
       sx={{
         display: 'grid',
-        gridTemplateColumns: '3fr 2fr',
+        gridTemplateColumns: { sm: '3fr 2fr' },
         ml: 'auto',
         mr: 'auto',
       }}

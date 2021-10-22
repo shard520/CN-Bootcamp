@@ -5,16 +5,13 @@ const Numbers = ({ updateDisplay }) => {
   return (
     <Box
       sx={{
-        gridColumn: '1 / span 1',
-        mr: 2,
+        gridColumn: { sm: '1 / span 1' },
+        mr: { sm: 2 },
+        mb: { xs: 2, sm: 'unset' },
         display: 'grid',
         gridTemplateRows: 'repeat(4, 1fr)',
         gridTemplateColumns: 'repeat(3, 1fr)',
-        // width: '50%',
-        // ml: 'auto',
-        // mr: 'auto',
       }}
-      spacing={2}
     >
       <Button data-value="1" variant="outlined" onClick={updateDisplay}>
         1

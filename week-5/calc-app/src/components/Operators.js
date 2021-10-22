@@ -7,15 +7,12 @@ const Operators = ({ updateDisplay, equalsClick, reset, cancelEntry }) => {
       sx={{
         gridColumn: '2 / span 1',
         display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
-        // width: '50%',
-        // ml: 'auto',
-        // mr: 'auto',
+        gridArea: { xs: '2 / 1 / span 2 / span 1', sm: 'unset' },
+        gridTemplateColumns: { xs: 'repeat(4, 1fr)', sm: '1fr 1fr' },
       }}
-      spacing={2}
     >
       <Button
-        sx={{ gridColumn: '1 / span 1' }}
+        sx={{ gridColumn: { sm: '1 / span 1' } }}
         data-value="+"
         variant="outlined"
         onClick={updateDisplay}
@@ -23,7 +20,7 @@ const Operators = ({ updateDisplay, equalsClick, reset, cancelEntry }) => {
         +
       </Button>
       <Button
-        sx={{ gridColumn: '1 / span 1' }}
+        sx={{ gridColumn: { sm: '1 / span 1' } }}
         data-value="-"
         variant="outlined"
         onClick={updateDisplay}
@@ -31,7 +28,7 @@ const Operators = ({ updateDisplay, equalsClick, reset, cancelEntry }) => {
         -
       </Button>
       <Button
-        sx={{ textTransform: 'none', gridColumn: '1 / span 1' }}
+        sx={{ textTransform: 'none', gridColumn: { sm: '1 / span 1' } }}
         data-value="*"
         variant="outlined"
         onClick={updateDisplay}
@@ -39,7 +36,7 @@ const Operators = ({ updateDisplay, equalsClick, reset, cancelEntry }) => {
         x
       </Button>
       <Button
-        sx={{ gridColumn: '1 / span 1' }}
+        sx={{ gridColumn: { sm: '1 / span 1' } }}
         data-value="/"
         variant="outlined"
         onClick={updateDisplay}
@@ -48,21 +45,26 @@ const Operators = ({ updateDisplay, equalsClick, reset, cancelEntry }) => {
       </Button>
 
       <Button
-        sx={{ gridColumn: '2 / span 1', gridRow: '1 / span 1' }}
+        sx={{ gridArea: { sm: '1 / 2 / span 1 / span 1' } }}
         variant="outlined"
         onClick={reset}
       >
         C
       </Button>
       <Button
-        sx={{ gridColumn: '2 / span 1', gridRow: '2 / span 1' }}
+        sx={{ gridArea: { sm: '2 / 2 / span 1 / span 1' } }}
         variant="outlined"
         onClick={cancelEntry}
       >
         CE
       </Button>
       <Button
-        sx={{ gridColumn: '2 / span 1', gridRow: '3 / span 2' }}
+        sx={{
+          gridArea: {
+            xs: '2 / 3 / span 1 / span 2 ',
+            sm: '3 / 2 / span 2 / span 1',
+          },
+        }}
         data-value="="
         variant="contained"
         disableElevation
