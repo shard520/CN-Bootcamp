@@ -22,7 +22,8 @@ function App() {
   const operatorRegex = new RegExp(/[+]|[-]|[*]|[/]/);
 
   const handleClick = e => {
-    const char = e.target.dataset.value;
+    // Use closest method to make sure icon clicks register correctly
+    const char = e.target.closest('button').dataset.value;
 
     if (
       String(displayNum) === '0' &&
@@ -35,12 +36,24 @@ function App() {
         arr.push(char);
         return arr;
       });
+
       setDisplayNum('0');
     } else if (operatorRegex.test(char)) {
       setHistoryArr(() => {
         return [...historyArr, displayNum, char];
       });
+
       setDisplayNum('0');
+    } else if (char === 'plusMinus') {
+      let newNum = displayNum;
+
+      if (newNum[0] === '-') {
+        newNum = newNum.substring(1);
+      } else {
+        newNum = `-${newNum}`;
+      }
+
+      setDisplayNum(newNum);
     } else {
       // only allow 1 decimal point
       if (String(displayNum).includes('.') && char === '.') return;

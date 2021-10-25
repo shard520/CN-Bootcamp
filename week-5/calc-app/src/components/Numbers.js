@@ -1,4 +1,4 @@
-import { Button } from '@mui/material';
+import { Button, SvgIcon } from '@mui/material';
 import { Box } from '@mui/system';
 
 const Numbers = ({ updateDisplay }) => {
@@ -40,12 +40,14 @@ const Numbers = ({ updateDisplay }) => {
       <Button data-value="9" variant="outlined" onClick={updateDisplay}>
         9
       </Button>
-      <Button
-        sx={{ gridColumn: '1 / span 2' }}
-        data-value="0"
-        variant="outlined"
-        onClick={updateDisplay}
-      >
+      <Button data-value="plusMinus" variant="outlined" onClick={updateDisplay}>
+        <SvgIcon fontSize="inherit">
+          <path d="M13.241 18.68c-0.686 0-1.242 0.556-1.242 1.241s0.556 1.242 1.242 1.242h9.517c0.686 0 1.242-0.556 1.242-1.242s-0.556-1.241-1.242-1.241h-9.517z"></path>
+          <path d="M0 7.508c0 0.686 0.556 1.241 1.242 1.241h3.31v3.311c0 0.686 0.556 1.242 1.241 1.242s1.242-0.556 1.242-1.242v-3.311h3.724c0.686 0 1.241-0.556 1.241-1.241s-0.556-1.242-1.241-1.242h-3.724v-4.138c0-0.686-0.556-1.241-1.242-1.241s-1.241 0.556-1.241 1.241v4.138h-3.31c-0.686 0-1.241 0.556-1.241 1.242z"></path>
+          <path d="M22.324 2.932c-0.485-0.485-1.271-0.485-1.756 0l-18.061 18.062c-0.485 0.485-0.485 1.271 0 1.755 0.242 0.243 0.56 0.364 0.878 0.364s0.636-0.121 0.878-0.364l18.061-18.061c0.485-0.485 0.485-1.271 0-1.756z"></path>
+        </SvgIcon>
+      </Button>
+      <Button data-value="0" variant="outlined" onClick={updateDisplay}>
         0
       </Button>
       <Button data-value="." variant="outlined" onClick={updateDisplay}>

@@ -43,7 +43,6 @@ const Operators = ({ updateDisplay, equalsClick, reset, cancelEntry }) => {
       >
         ÷
       </Button>
-
       <Button
         sx={{ gridArea: { sm: '1 / 2 / span 1 / span 1' } }}
         variant="outlined"
