@@ -7,6 +7,7 @@ import './App.css';
 
 import Display from './components/Display';
 import Controls from './components/Controls';
+import SmallDisplay from './components/SmallDisplay';
 
 const appTheme = createTheme({
   typography: {
@@ -16,24 +17,51 @@ const appTheme = createTheme({
 
 function App() {
   const [displayNum, setDisplayNum] = useState('0');
+  const [historyArr, setHistoryArr] = useState([]);
+
+  const operatorRegex = new RegExp(/[+]|[-]|[*]|[/]/);
 
   const handleClick = e => {
     const char = e.target.dataset.value;
 
-    let newNum = displayNum + char;
+    if (
+      String(displayNum) === '0' &&
+      operatorRegex.test(char) &&
+      operatorRegex.test(historyArr[historyArr.length - 1])
+    ) {
+      setHistoryArr(() => {
+        const arr = [...historyArr];
+        arr.pop();
+        arr.push(char);
+        return arr;
+      });
+      setDisplayNum('0');
+    } else if (operatorRegex.test(char)) {
+      setHistoryArr(() => {
+        return [...historyArr, displayNum, char];
+      });
+      setDisplayNum('0');
+    } else {
+      // only allow 1 decimal point
+      if (String(displayNum).includes('.') && char === '.') return;
 
-    if (String(newNum).includes('error')) {
-      newNum = newNum.replace('error', '');
+      let newNum = displayNum + char;
+
+      // Remove error message
+      if (String(newNum).includes('error')) {
+        newNum = newNum.replace('error', '');
+      }
+
+      // remove leading 0
+      if (newNum[0] === '0' && newNum[1] !== '.') newNum = newNum.substring(1);
+      setDisplayNum(newNum);
     }
-
-    // remove leading 0
-    if (newNum[0] === '0' && newNum[1] !== '.') newNum = newNum.substring(1);
-    setDisplayNum(newNum);
   };
 
   const handleCalc = () => {
     try {
-      const result = evaluate(displayNum);
+      setHistoryArr(() => [...historyArr, displayNum]);
+      const result = evaluate(historyArr.join('') + displayNum);
       setDisplayNum(result);
     } catch (err) {
       console.error(`💥 💥 ${err}`);
@@ -43,14 +71,17 @@ function App() {
 
   const handleReset = () => {
     setDisplayNum(0);
+    setHistoryArr([]);
   };
 
   const handleCancel = () => {
-    let numStr = String(displayNum);
+    setHistoryArr(() => {
+      const arr = [...historyArr];
+      arr.pop();
+      return arr;
+    });
 
-    numStr = numStr.slice(0, -1);
-
-    setDisplayNum(numStr);
+    setDisplayNum(0);
   };
 
   return (
@@ -59,6 +90,7 @@ function App() {
         <Box className="app">
           <Box sx={{ width: { xs: '85%', sm: '60%' }, ml: 'auto', mr: 'auto' }}>
             <Display displayNum={displayNum} />
+            <SmallDisplay historyArr={historyArr} />
             <Controls
               updateDisplay={handleClick}
               equalsClick={handleCalc}
