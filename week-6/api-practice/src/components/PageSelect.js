@@ -2,13 +2,13 @@ const PageSelect = ({ handlePageSelect }) => {
   return (
     <>
       <label htmlFor="pageSelect">Choose a Page:</label>
-      <button onClick={e => handlePageSelect(e)} value="home">
+      <button onClick={handlePageSelect} value="home">
         Page 1
       </button>
-      <button onClick={e => handlePageSelect(e)} value="prev">
+      <button onClick={handlePageSelect} value="prev">
         Previous Page
       </button>
-      <button onClick={e => handlePageSelect(e)} value="next">
+      <button onClick={handlePageSelect} value="next">
         Next Page
       </button>
     </>

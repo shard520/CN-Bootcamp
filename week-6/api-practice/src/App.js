@@ -1,18 +1,19 @@
 import { useEffect, useState } from 'react';
-import Gallery from './components/Gallery';
-import RoverSelect from './components/RoverSelect';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import './App.css';
-import PageSelect from './components/PageSelect';
+import Latest from './pages/Latest';
 
 const App = () => {
   const [rover, setRover] = useState('curiosity');
+  const [query, setQuery] = useState('photos');
   const [page, setPage] = useState(1);
   const [data, setData] = useState([]);
 
-  const url = `https://mars-photos.herokuapp.com/api/v1/rovers/${rover}/latest_photos?api_key=DEMO_KEY&page=${page}`;
+  const url = `https://mars-photos.herokuapp.com/api/v1/rovers/${rover}/${query}?api_key=DEMO_KEY&page=${page}`;
 
   const handleRoverSelect = e => {
+    setQuery('latest_photos');
     setRover(e.target.value);
   };
 
@@ -44,12 +45,25 @@ const App = () => {
   }, [rover, page]);
 
   return (
-    <div>
-      <h1>Latest Mars Rover Pictures:</h1>
-      <RoverSelect handleRoverSelect={handleRoverSelect} />
-      <PageSelect handlePageSelect={handlePageSelect} />
-      <Gallery data={data} />
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <li>
+            <Link to="/Latest">Latest Photos</Link>
+          </li>
+        </nav>
+
+        <Switch>
+          <Route path="/latest">
+            <Latest
+              handleRoverSelect={handleRoverSelect}
+              handlePageSelect={handlePageSelect}
+              data={data}
+            />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 };
 
