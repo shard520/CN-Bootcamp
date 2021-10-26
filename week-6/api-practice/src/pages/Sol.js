@@ -1,20 +1,24 @@
 import Gallery from '../components/Gallery';
 import PageSelect from '../components/PageSelect';
 import RoverSelect from '../components/RoverSelect';
+import SolSelect from '../components/SolSelect';
 
-const Latest = ({
+const Sol = ({
   handleRoverSelect,
   handlePageSelect,
-  data: { latest_photos: data },
+  handleSolSelect,
+  solValue,
+  data: { photos: data },
 }) => {
   return (
     <>
-      <h1>Latest Mars Rover Pictures:</h1>
+      <h1>Select Sol:</h1>
       <RoverSelect handleRoverSelect={handleRoverSelect} />
+      <SolSelect handleSolSelect={handleSolSelect} solValue={solValue} />
       <PageSelect handlePageSelect={handlePageSelect} />
       <Gallery data={data} />
     </>
   );
 };
 
-export default Latest;
+export default Sol;
