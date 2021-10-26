@@ -1,6 +1,6 @@
 const PageSelect = ({ handlePageSelect }) => {
   return (
-    <>
+    <div className="input__item">
       <label htmlFor="pageSelect">Choose a Page:</label>
       <button onClick={handlePageSelect} value="home">
         Page 1
@@ -11,7 +11,7 @@ const PageSelect = ({ handlePageSelect }) => {
       <button onClick={handlePageSelect} value="next">
         Next Page
       </button>
-    </>
+    </div>
   );
 };
 

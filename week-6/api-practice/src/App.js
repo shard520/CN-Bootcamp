@@ -57,7 +57,7 @@ const App = () => {
 
   return (
     <Router>
-      <div>
+      <div className="app">
         <nav>
           <li>
             <Link onClick={() => setQuery('latest_photos')} to="/latest">

@@ -10,9 +10,11 @@ const Latest = ({
   return (
     <>
       <h1>Latest Mars Rover Pictures:</h1>
-      <RoverSelect handleRoverSelect={handleRoverSelect} />
-      <PageSelect handlePageSelect={handlePageSelect} />
-      <Gallery data={data} />
+      <div className="input">
+        <RoverSelect handleRoverSelect={handleRoverSelect} />
+        <PageSelect handlePageSelect={handlePageSelect} />
+        <Gallery data={data} />
+      </div>
     </>
   );
 };

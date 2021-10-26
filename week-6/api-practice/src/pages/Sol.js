@@ -13,10 +13,12 @@ const Sol = ({
   return (
     <>
       <h1>Select Sol:</h1>
-      <RoverSelect handleRoverSelect={handleRoverSelect} />
-      <SolSelect handleSolSelect={handleSolSelect} solValue={solValue} />
-      <PageSelect handlePageSelect={handlePageSelect} />
-      <Gallery data={data} />
+      <div className="input">
+        <RoverSelect handleRoverSelect={handleRoverSelect} />
+        <SolSelect handleSolSelect={handleSolSelect} solValue={solValue} />
+        <PageSelect handlePageSelect={handlePageSelect} />
+        <Gallery data={data} />
+      </div>
     </>
   );
 };
