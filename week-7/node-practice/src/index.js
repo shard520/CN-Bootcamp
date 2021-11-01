@@ -1,42 +1,29 @@
-const prompt = require('prompt-sync')({ sigint: true });
+const yargs = require('yargs');
+const { hideBin } = require('yargs/helpers');
+const argv = yargs(hideBin(process.argv)).argv;
 
-const { updateArray, expandArray } = require('./utils');
-
-const movies = [];
+const { Movie, moviesArray } = require('./utils');
 
 const app = () => {
-  let keepRunning = true;
-
-  while (keepRunning) {
-    const movieInput = prompt('Please enter a movie title: ');
-
-    updateArray(movies, movieInput);
-    console.log(`${movieInput} has been added to your list.`);
-
-    const additionalInfo = prompt(
-      'Please enter additional information about the film, e.g. lead actor, director etc: '
-    );
-
-    expandArray(movies, additionalInfo);
-
-    console.log(
-      `${additionalInfo} has been added to ${movies[movies.length - 1][0]}`
-    );
-
-    const continueAdding = prompt(
-      'Do you want to add another movie? y/n: '
-    ).toLowerCase();
-
-    if (continueAdding === 'n' || continueAdding === 'no') keepRunning = false;
+  console.log(argv);
+  if (argv.add) {
+    const newMovie = new Movie(argv.title, argv.actor);
+    newMovie.add();
+  } else if (argv.multi) {
+    if (Array.isArray(argv.actor)) {
+      const newMovie1 = new Movie(argv.title[0], argv.actor[0]);
+      const newMovie2 = new Movie(argv.title[1], argv.actor[1]);
+      newMovie1.add();
+      newMovie2.add();
+    } else if (typeof argv.actor === 'string') {
+      const newMovie1 = new Movie(argv.title[0], argv.actor);
+      const newMovie2 = new Movie(argv.title[1]);
+      newMovie1.add();
+      newMovie2.add();
+    }
   }
 
-  console.log(`Your movie collection contains:`);
-
-  movies.forEach(movie => {
-    console.log(`${movie[0]}: `);
-    console.log(`${movie[1]}`);
-    console.log('');
-  });
+  console.log(moviesArray);
 };
 
 app();

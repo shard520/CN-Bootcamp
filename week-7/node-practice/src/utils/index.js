@@ -1,14 +1,17 @@
-const updateArray = (arr, newEntry) => {
-  arr.push(newEntry);
-  return arr;
-};
+const moviesArray = [];
 
-const expandArray = (arr, newInfo) => {
-  let lastEntry = arr[arr.length - 1];
-  lastEntry = [lastEntry, newInfo];
-  arr.pop();
-  arr.push(lastEntry);
-  return arr;
-};
+class Movie {
+  constructor(title, actor = 'unspecified') {
+    this.title = title;
+    this.actor = actor;
+  }
 
-module.exports = { updateArray, expandArray };
+  add() {
+    moviesArray.push(this);
+  }
+}
+
+module.exports = {
+  Movie,
+  moviesArray,
+};
