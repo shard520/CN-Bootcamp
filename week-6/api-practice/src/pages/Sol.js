@@ -17,8 +17,8 @@ const Sol = ({
         <RoverSelect handleRoverSelect={handleRoverSelect} />
         <SolSelect handleSolSelect={handleSolSelect} solValue={solValue} />
         <PageSelect handlePageSelect={handlePageSelect} />
-        <Gallery data={data} />
       </div>
+      <Gallery data={data} />
     </>
   );
 };

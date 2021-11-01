@@ -2,18 +2,20 @@ import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import './App.css';
+import fetchManifests from './utils/fetchManifests';
+
 import Latest from './pages/Latest';
 import Sol from './pages/Sol';
 
 const App = () => {
+  const [manifests, setManifests] = useState({});
   const [rover, setRover] = useState('curiosity');
-  const [query, setQuery] = useState('');
+
   const [page, setPage] = useState(1);
   const [solValue, setSolvalue] = useState(1);
   const [params, setParams] = useState('');
-  const [data, setData] = useState([]);
 
-  const url = `https://mars-photos.herokuapp.com/api/v1/rovers/${rover}/${query}?api_key=DEMO_KEY&page=${page}${params}`;
+  const [data, setData] = useState({});
 
   const handleRoverSelect = e => {
     setRover(e.target.value);
@@ -34,40 +36,20 @@ const App = () => {
     setParams(`&sol=${val}`);
   };
 
-  const fetcher = async () => {
-    try {
-      const fetchedData = await fetch(url);
-      if (fetchedData.status !== 200)
-        throw new Error(`${fetchedData.status} - ${fetchedData.statusText}`);
-
-      const res = await fetchedData.json();
-      setData(res);
-      console.log(res);
-    } catch (err) {
-      console.error(`💥💥 ${err.message}`);
-    }
-  };
-
+  // fetch manifests on page load
   useEffect(() => {
-    console.log(url);
-
-    fetcher();
-    // eslint-disable-next-line
-  }, [rover, page, query, params]);
+    setManifests(() => fetchManifests());
+  }, []);
 
   return (
     <Router>
       <div className="app">
         <nav>
           <li>
-            <Link onClick={() => setQuery('latest_photos')} to="/latest">
-              Latest Photos
-            </Link>
+            <Link to="/latest">Latest Photos</Link>
           </li>
           <li>
-            <Link onClick={() => setQuery('photos')} to="/sol">
-              Select by Sol
-            </Link>
+            <Link to="/sol">Select by Sol</Link>
           </li>
         </nav>
 
@@ -77,6 +59,7 @@ const App = () => {
               handleRoverSelect={handleRoverSelect}
               handlePageSelect={handlePageSelect}
               data={data}
+              setData={setData}
             />
           </Route>
           <Route path="/sol">
