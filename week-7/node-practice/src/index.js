@@ -1,8 +1,4 @@
-const argv = require('yargs/yargs')(process.argv.slice(2))
-  .usage('Usage: $0 <command> [options]')
-  .command('--add', 'Add a single movie')
-  .command('--multi', 'Add multiple movies').argv;
-
+const argv = require('./utils/yargsDocs');
 const { Movie, moviesArray } = require('./utils');
 
 const app = () => {
