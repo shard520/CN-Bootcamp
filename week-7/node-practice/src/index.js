@@ -5,30 +5,38 @@ const { updateArray, expandArray } = require('./utils');
 const movies = [];
 
 const app = () => {
-  const movieInput = prompt('Please enter a movie title: ');
+  let keepRunning = true;
 
-  updateArray(movies, movieInput);
-  console.log(`${movieInput} has been added to your list.`);
+  while (keepRunning) {
+    const movieInput = prompt('Please enter a movie title: ');
 
-  const additionalInfo = prompt(
-    'Please enter additional information about the film, e.g. lead actor, director etc: '
-  );
+    updateArray(movies, movieInput);
+    console.log(`${movieInput} has been added to your list.`);
 
-  expandArray(movies, additionalInfo);
+    const additionalInfo = prompt(
+      'Please enter additional information about the film, e.g. lead actor, director etc: '
+    );
 
-  console.log(
-    `${additionalInfo} has been added to ${movies[movies.length - 1][0]}`
-  );
+    expandArray(movies, additionalInfo);
 
-  console.log(`You movie collection contains:`);
+    console.log(
+      `${additionalInfo} has been added to ${movies[movies.length - 1][0]}`
+    );
+
+    const continueAdding = prompt(
+      'Do you want to add another movie? y/n: '
+    ).toLowerCase();
+
+    if (continueAdding === 'n' || continueAdding === 'no') keepRunning = false;
+  }
+
+  console.log(`Your movie collection contains:`);
 
   movies.forEach(movie => {
     console.log(`${movie[0]}: `);
     console.log(`${movie[1]}`);
-    console.log('\n');
+    console.log('');
   });
-
-  console.log(movies);
 };
 
 app();
