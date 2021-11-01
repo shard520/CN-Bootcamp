@@ -7,7 +7,14 @@ const { Movie, moviesArray } = require('./utils');
 const app = () => {
   console.log(argv);
   if (argv.add) {
-    const newMovie = new Movie(argv.title, argv.actor);
+    let newMovie;
+
+    if (argv.title) {
+      newMovie = new Movie(argv.title, argv?.actor);
+    } else {
+      newMovie = new Movie(argv.movie.title, argv.movie?.actor);
+    }
+
     newMovie.add();
   } else if (argv.multi) {
     let newMovie1, newMovie2;
@@ -18,6 +25,9 @@ const app = () => {
     } else if (typeof argv.actor === 'string') {
       newMovie1 = new Movie(argv.title[0], argv.actor);
       newMovie2 = new Movie(argv.title[1]);
+    } else if (argv.movie1 && argv.movie2) {
+      newMovie1 = new Movie(argv.movie1.title, argv.movie1?.actor);
+      newMovie2 = new Movie(argv.movie2.title, argv.movie2?.actor);
     } else {
       newMovie1 = new Movie(argv.title[0]);
       newMovie2 = new Movie(argv.title[1]);
