@@ -10,20 +10,24 @@ const app = () => {
     const newMovie = new Movie(argv.title, argv.actor);
     newMovie.add();
   } else if (argv.multi) {
+    let newMovie1, newMovie2;
+
     if (Array.isArray(argv.actor)) {
-      const newMovie1 = new Movie(argv.title[0], argv.actor[0]);
-      const newMovie2 = new Movie(argv.title[1], argv.actor[1]);
-      newMovie1.add();
-      newMovie2.add();
+      newMovie1 = new Movie(argv.title[0], argv.actor[0]);
+      newMovie2 = new Movie(argv.title[1], argv.actor[1]);
     } else if (typeof argv.actor === 'string') {
-      const newMovie1 = new Movie(argv.title[0], argv.actor);
-      const newMovie2 = new Movie(argv.title[1]);
-      newMovie1.add();
-      newMovie2.add();
+      newMovie1 = new Movie(argv.title[0], argv.actor);
+      newMovie2 = new Movie(argv.title[1]);
+    } else {
+      newMovie1 = new Movie(argv.title[0]);
+      newMovie2 = new Movie(argv.title[1]);
     }
+
+    newMovie1.add();
+    newMovie2.add();
   }
 
-  console.log(moviesArray);
+  console.table(moviesArray);
 };
 
 app();
