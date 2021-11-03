@@ -3,3 +3,4 @@
 /week-2/examples
 /week-2/fonts*presentation
 node_modules/
+.env
