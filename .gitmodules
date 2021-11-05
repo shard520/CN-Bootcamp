@@ -1,0 +1,3 @@
+[submodule "week-7/mongoose-practice"]
+	path = week-7/mongoose-practice
+	url = ./week-7/mongoose-practice

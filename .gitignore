@@ -4,3 +4,4 @@
 /week-2/fonts*presentation
 node_modules/
 .env
+*.docx
