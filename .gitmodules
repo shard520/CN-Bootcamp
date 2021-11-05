@@ -1,3 +1,9 @@
 [submodule "week-7/mongoose-practice"]
 	path = week-7/mongoose-practice
 	url = https://github.com/shard520/mongoose-practice
+[submodule "week-7/mongo-practice"]
+	path = week-7/mongo-practice
+	url = https://github.com/shard520/mongo-practice
+[submodule "week-6/Cats4Lyf"]
+	path = week-6/Cats4Lyf
+	url = https://github.com/james-arn/Cats4Lyf
