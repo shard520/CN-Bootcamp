@@ -7,3 +7,6 @@
 [submodule "week-6/Cats4Lyf"]
 	path = week-6/Cats4Lyf
 	url = https://github.com/james-arn/Cats4Lyf
+[submodule "week-8/sequelize"]
+	path = week-8/sequelize
+	url = https://github.com/shard520/sequelize-practice.git
