@@ -10,3 +10,6 @@
 [submodule "week-8/sequelize"]
 	path = week-8/sequelize
 	url = https://github.com/shard520/sequelize-practice.git
+[submodule "week-9/learning-REST"]
+	path = week-9/learning-REST
+	url = https://github.com/shard520/rest-api.git
