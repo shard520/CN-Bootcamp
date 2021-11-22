@@ -13,3 +13,6 @@
 [submodule "week-9/learning-REST"]
 	path = week-9/learning-REST
 	url = https://github.com/shard520/rest-api.git
+[submodule "week-10/movies-api"]
+	path = week-10/movies-api
+	url = https://github.com/shard520/movies-react-app.git
